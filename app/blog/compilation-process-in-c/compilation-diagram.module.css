@@ -1,0 +1,161 @@
+.diagram {
+  margin: 30px 0;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.label {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.source {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  color: var(--subtle);
+}
+
+.source strong {
+  color: var(--foreground);
+}
+
+.diagram .stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.diagram .stage {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 16px 12px;
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--blue);
+  border-radius: 5px;
+  background: var(--background);
+}
+
+.stage:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -21px;
+  color: var(--blue);
+  content: '→';
+  transform: translateY(-50%);
+}
+
+.number {
+  display: block;
+  color: var(--blue);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+}
+
+.diagram .stage h3 {
+  margin: 8px 0 10px;
+  font-size: 14px;
+}
+
+.diagram .stage p {
+  min-height: 42px;
+  margin: 0 0 14px;
+  color: var(--subtle);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.artifact {
+  display: block;
+  font-size: 13px;
+  color: var(--foreground);
+}
+
+.diagram .linkInputs {
+  margin: 18px 0 0;
+  font-size: 12px;
+  color: var(--subtle);
+}
+
+.runtime {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.runtime span {
+  color: var(--blue);
+}
+
+.runtime code {
+  color: var(--foreground);
+}
+
+.caption {
+  margin-top: 18px;
+  color: var(--subtle);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .diagram {
+    padding: 20px;
+  }
+
+  .diagram .stages {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .diagram .stage {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 10px;
+    align-items: baseline;
+    padding: 14px 16px;
+  }
+
+  .stage:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: -26px;
+    left: 50%;
+    content: '↓';
+    transform: translateX(-50%);
+  }
+
+  .diagram .stage h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+  }
+
+  .diagram .stage p {
+    grid-column: 2;
+    min-height: 0;
+    margin: 0 0 8px;
+  }
+
+  .artifact {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,22 @@
+Circuit browser compiler dependencies
+
+Document formatting uses @wasm-fmt/clang-format 23.1.0, running Clang Format
+in a browser worker. Its MIT license is in clang-format-MIT.txt; the LLVM
+license and exceptions are in LLVM.txt.
+Upstream: https://github.com/wasm-fmt/clang-format
+
+LLVM Clang/LLD and its WASI C/C++ sysroot are distributed by @yowasp/clang
+22.0.0-git20542-10. The package is pinned by package-lock.json. The shipped
+compiler modules and loader are unmodified; Circuit gzip-compresses and splits
+the assets for static hosting, and verifies their SHA-256 after decompression.
+Upstream: https://github.com/YoWASP/clang
+LLVM: https://github.com/llvm/llvm-project
+WASI libc: https://github.com/WebAssembly/wasi-libc
+YoWASP JavaScript runtime: https://github.com/YoWASP/runtime-js
+
+The application uses @bjorn3/browser_wasi_shim 0.4.2 to execute user modules.
+Upstream: https://github.com/bjorn3/browser_wasi_shim
+
+License texts and copyright notices accompany this file. LLVM's license
+includes LLVM exceptions and historical notices. wasi-libc.txt describes
+the component licenses; musl.txt and cloudlibc.txt retain their notices.

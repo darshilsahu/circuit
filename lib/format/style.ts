@@ -1,0 +1,9 @@
+export const formatStyle = JSON.stringify({
+  BasedOnStyle: 'LLVM',
+  IndentWidth: 4,
+  TabWidth: 4,
+  UseTab: 'Never',
+  ColumnLimit: 100,
+  SortIncludes: 'Never',
+  AllowShortFunctionsOnASingleLine: 'None',
+});

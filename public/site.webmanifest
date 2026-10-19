@@ -1,0 +1,29 @@
+{
+  "name": "Circuit — Online C Compiler",
+  "short_name": "Circuit",
+  "description": "Compile and run C code in your browser.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121611",
+  "theme_color": "#75aff2",
+  "icons": [
+    {
+      "src": "/favicon.svg?v=4",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png?v=4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png?v=4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

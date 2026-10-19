@@ -1,0 +1,12 @@
+{
+  "format": "circuit-backup",
+  "version": 1,
+  "programs": [
+    {
+      "name": "qa_stdin.c",
+      "code": "int main(void){return 0;}\n",
+      "input": ""
+    },
+    { "name": "qa_stdin.c", "code": "int main(void){return 1;}\n", "input": "" }
+  ]
+}
